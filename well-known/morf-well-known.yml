@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: probed /.well-known/ on Morf API + auth hosts
+hosts:
+- host: https://auth.morf.health
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: morf-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: morf-oauth-authorization-server.json
+  - path: /.well-known/jwks.json
+    status: 200
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.morf.healthcare
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: morf-api-oauth-authorization-server.json
+  - path: /.well-known/openid-configuration
+    status: 415
+  - path: /.well-known/security.txt
+    status: 415
+  - path: /.well-known/api-catalog
+    status: 415
+  - path: /.well-known/ai-plugin.json
+    status: 415
+notes: >-
+  Morf serves RFC 8414 OAuth Authorization Server Metadata and OpenID Connect
+  Discovery documents from auth.morf.health (issuer https://auth.morf.health).
+  A second RFC 8414 document is served from the API host api.morf.healthcare.
+  No security.txt is published on either host.

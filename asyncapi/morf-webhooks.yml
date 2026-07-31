@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morf.health/
+type: Webhooks
+summary: >-
+  Morf is fundamentally webhook-driven. Most workflows are triggered by a source
+  application POSTing a webhook to Morf, which processes the payload into an
+  event; once triggered, a sequence of actions executes across connected
+  applications. Inbound webhooks are received at the Morf webhook URL, which
+  begins with https://api.morf.healthcare/webhooks/.
+ingestion:
+  base_url: https://api.morf.healthcare/webhooks/
+  direction: inbound
+  model: >-
+    Source application -> Morf webhook endpoint -> event -> workflow trigger ->
+    action sequence.
+  retry: >-
+    Webhook delivery/retry behavior is configurable within Morf workflows
+    (per docs).
+source_applications:
+- name: Healthie
+  docs: https://docs.morf.health/events/payloads/healthie/get_started_healthie
+- name: Elation
+  docs: https://docs.morf.health/events/payloads/elation/get_started_elation
+- name: Medplum
+  docs: https://docs.morf.health/events/payloads/medplum/get_started_medplum
+- name: Feathery
+  docs: https://docs.morf.health/events/payloads/feathery/get_started_feathery
+event_catalog_docs: https://docs.morf.health/
+notes: >-
+  Event payload catalogs are published per source application under
+  docs.morf.health/events/payloads/<vendor>/. No AsyncAPI document is published;
+  this artifact captures the webhook surface only (spec_type: none). NEVER
+  fabricated - source-application list is a sample of documented integrations.

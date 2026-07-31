@@ -1,7 +1,16 @@
 aid: morf
 name: Morf
-description: Morf is a company surfaced as a portfolio company of kindred-ventures and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Morf is a HIPAA-compliant healthcare automation and integration platform that
+  connects EHRs, CRMs, payment systems, and communication tools so digital
+  health teams can eliminate manual work and put patient outreach on autopilot.
+  Workflows are triggered by inbound webhooks from source applications (Healthie,
+  Elation, Medplum, Feathery, athenahealth, Cerbo, DrChrono, Hint Health, and
+  dozens more), which Morf processes into events that fan out to actions across
+  30+ connected applications. The platform exposes a REST API at
+  api.morf.healthcare secured with API keys and OAuth 2.0 / OpenID Connect
+  (auth.morf.health), a webhook ingestion surface, an integration/action catalog
+  of 170+ pre-built actions, and Flo AI, a no-code workflow co-pilot.
 url: https://raw.githubusercontent.com/api-evangelist/morf/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +18,120 @@ x-backed-by:
 - kindred-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://cdn.sanity.io/images/teurbt0n/production/9e3de2ea4057cbaef5c3b8c011b87232520081e0-1200x630.jpg?w=1200
 tags:
 - Company
-apis: []
+- Healthcare
+- Health IT
+- Automation
+- Integration
+- iPaaS
+- Webhooks
+- EHR
+- Patient Communication
+- HIPAA
+- Workflow
+- Digital Health
+apis:
+- name: Morf API
+  description: >-
+    Morf's REST API and webhook surface for building healthcare automation
+    workflows. Webhooks from source applications are ingested at
+    api.morf.healthcare/webhooks/ and processed into events that trigger
+    sequences of actions across connected EHR, CRM, payments, and messaging
+    systems. Authenticated with an API-Key header (and OAuth 2.0 / OIDC via
+    auth.morf.health).
+  humanURL: https://docs.morf.health/
+  baseURL: https://api.morf.healthcare
+  tags:
+  - Healthcare
+  - Automation
+  - Webhooks
+  - Integration
+  properties:
+  - type: Documentation
+    url: https://docs.morf.health/
+  - type: Webhooks
+    url: asyncapi/morf-webhooks.yml
+  - type: Authentication
+    url: authentication/morf-authentication.yml
+  - type: OAuthScopes
+    url: scopes/morf-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/morf-trust-center.yml
+- type: DomainSecurity
+  url: security/morf-domain-security.yml
 - type: Website
   url: https://morf.health/
+- type: DeveloperPortal
+  url: https://docs.morf.health/
+- type: Documentation
+  url: https://docs.morf.health/
+- type: APIReference
+  url: https://docs.morf.health/libraries/introduction
+- type: GettingStarted
+  url: https://docs.morf.health/morf_dashboard/overview
+- type: HowItWorks
+  url: https://www.morf.health/how-it-works
+- type: Integrations
+  url: https://www.morf.health/integrations
+- type: Blog
+  url: https://www.morf.health/blog
+- type: Pricing
+  url: https://www.morf.health/pricing
+- type: SignUp
+  url: https://dashboard.morf.health/signup
+- type: Login
+  url: https://dashboard.morf.health/
+- type: Support
+  url: https://www.morf.health/contact
+- type: TermsOfService
+  url: https://www.morf.health/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.morf.health/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/morfhealth
+- type: Compliance
+  url: https://trust.morf.health/
+- type: LLMsTxt
+  url: llms/morf-llms.txt
+- type: WellKnown
+  url: well-known/morf-well-known.yml
+- type: Authentication
+  url: authentication/morf-authentication.yml
+- type: OAuthScopes
+  url: scopes/morf-scopes.yml
+- type: Conventions
+  url: conventions/morf-conventions.yml
+- type: Webhooks
+  url: asyncapi/morf-webhooks.yml
+- type: Conformance
+  url: conformance/morf-conformance.yml
+- type: Lifecycle
+  url: lifecycle/morf-lifecycle.yml

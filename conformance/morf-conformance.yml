@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.morf.health/security + live OAuth/OIDC discovery
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    RFC 8414 OAuth Authorization Server Metadata published at
+    api.morf.healthcare and auth.morf.health/.well-known/oauth-authorization-server.
+- id: oidc
+  conforms: true
+  evidence: >-
+    OpenID Connect Discovery document at
+    auth.morf.health/.well-known/openid-configuration (issuer https://auth.morf.health,
+    id_token RS256, PKCE S256, userinfo endpoint).
+- id: rfc8414-oauth-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server served on two hosts.
+- id: rfc8615-well-known
+  conforms: true
+  evidence: Documents served under /.well-known/ URI namespace.
+- id: pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256].
+- id: hipaa
+  conforms: true
+  evidence: >-
+    Morf security page states the platform is designed to meet HIPAA security
+    and privacy requirements for healthcare data and enters BAAs with applicable
+    customers.
+- id: fhir
+  conforms: partial
+  evidence: >-
+    Integrates with FHIR-native systems (Medplum) and maintains a FHIR Protocol
+    Buffers fork; Morf itself is an automation layer, not a FHIR server.
+- id: soc2
+  conforms: true
+  evidence: >-
+    Trust center at https://trust.morf.health/ lists SOC 2 (probed keywords:
+    soc 2, soc2).
+- id: iso-27001
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Not documented; error envelope not retrievable.
+compliance_program:
+  hipaa: true
+  soc2: true
+  baa: true
+  page: https://www.morf.health/security
+  trust_center: https://trust.morf.health/

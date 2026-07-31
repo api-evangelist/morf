@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://trust.morf.health/
+url: https://trust.morf.health/
+certifications:
+- SOC 2
+- HIPAA
+evidence:
+- source: https://trust.morf.health/
+  keywords:
+  - soc 2
+  - soc2
+  - hipaa
+  - trust center

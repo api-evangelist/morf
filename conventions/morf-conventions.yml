@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morf.health/
+docs: https://docs.morf.health/
+authentication:
+  style: API key (API-Key header) + public siteKey query param + OAuth 2.0 / OIDC
+  ref: authentication/morf-authentication.yml
+environments:
+  model: >-
+    Morf separates sandbox and live environments; API/site keys and integration
+    connections are environment-scoped (e.g. Healthie API-key integration must
+    correspond to your Morf environment).
+  values: [sandbox, live]
+eventing:
+  model: webhook-triggered
+  inbound_webhook_base: https://api.morf.healthcare/webhooks/
+  ref: asyncapi/morf-webhooks.yml
+versioning:
+  scheme: per-action version segment
+  observed: [v1, v2]
+  notes: >-
+    Action endpoints are versioned in the path, e.g.
+    /docs/actions/healthie/v1/... and /docs/actions/healthie/v2/create_or_update_patient.
+    No global API version or dated version train was documented.
+idempotency:
+  documented: false
+  notes: >-
+    No idempotency-key header or idempotency contract was found in the public
+    docs. Not asserted (no evidence).
+pagination:
+  documented: false
+  notes: >-
+    Individual list actions (e.g. Healthie list_appointments_for_patient) exist
+    but a single cross-cutting pagination convention was not documented publicly.
+rate_limiting:
+  documented: false
+error_envelope:
+  documented: false
+  notes: >-
+    A cross-cutting error envelope / RFC 9457 problem+json usage was not
+    retrievable (API host returns 415 to unauthenticated requests).
+cross_links:
+  authentication: authentication/morf-authentication.yml
+  scopes: scopes/morf-scopes.yml
+  webhooks: asyncapi/morf-webhooks.yml
+  lifecycle: lifecycle/morf-lifecycle.yml

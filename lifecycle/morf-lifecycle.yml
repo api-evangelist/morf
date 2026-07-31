@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morf.health/
+versioning:
+  scheme: per-action version segment (v1, v2)
+  current: v1
+  notes: >-
+    Actions are individually versioned in the path (e.g. healthie/v1/...,
+    healthie/v2/create_or_update_patient). No global API version, no dated
+    version train documented.
+  docs: https://docs.morf.health/libraries/introduction
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  notes: No deprecation policy or RFC 8594 Sunset/Deprecation header support documented.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_notes: >-
+  No public status page found (status.morf.health does not resolve).
+deprecated_operations: []
+notes: >-
+  Lifecycle is thin - Morf publishes per-action versioning but no separate
+  deprecation policy, SLA, or status page were discoverable. No StatusPage or
+  Deprecation canonical pointer emitted (nothing to point at).
