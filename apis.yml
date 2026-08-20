@@ -46,6 +46,19 @@ tags:
 - Automation
 - Integration
 - iPaaS
+- Webhook
+- EHR
+- Patient Communication
+- HIPAA
+- Workflows
+- Digital Health
+tags_raw:
+- Company
+- Healthcare
+- Health IT
+- Automation
+- Integration
+- iPaaS
 - Webhooks
 - EHR
 - Patient Communication
@@ -64,6 +77,11 @@ apis:
   humanURL: https://docs.morf.health/
   baseURL: https://api.morf.healthcare
   tags:
+  - Healthcare
+  - Automation
+  - Webhook
+  - Integration
+  tags_raw:
   - Healthcare
   - Automation
   - Webhooks
