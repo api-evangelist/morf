@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Morf is a company surfaced as a portfolio company of kindred-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Morf is a HIPAA-compliant healthcare automation and integration platform that connects EHRs, CRMs, payment systems, and communication tools so digital health teams can eliminate manual work and put patient outreach on autopilot. Workflows are triggered by inbound webhooks from source applications (Healthie, Elation, Medplum, Feathery, athenahealth, Cerbo, DrChrono, Hint Health, and dozens more), which Morf processes into events that fan out to actions across 30+ connected applications. The platform exposes a REST API at api.morf.healthcare secured with API keys and OAuth 2.0 / OpenID Connect (auth.morf.health), a webhook ingestion surface, an integration/action catalog of 170+ pre-built actions, and Flo AI, a no-code workflow co-pilot.
 
-Backed by: kindred-ventures — https://morf.health/
+**Areas:** Company · Healthcare · Health IT · Automation · Integration · iPaaS · Webhook · Electronic Health Records · Patient Communication · HIPAA · Workflows · Digital Health
+
+## Morf on APIs.io
+
+Everything profiled for Morf is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/morf/](https://apis.io/providers/morf/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Morf API](https://apis.io/apis/morf/morf-api/) — Morf's REST API and webhook surface for building healthcare automation workflows. Webhooks from source applications are ingested at…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Morf Webhooks](https://apis.io/asyncapis/morf/morf-webhooks/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Morf Authentication](https://apis.io/security/morf/morf-authentication/)
+- [Morf Domain Security](https://apis.io/security/morf/morf-domain-security/)
+- [Morf Trust Center](https://apis.io/security/morf/morf-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Morf Scopes](https://apis.io/scopes/morf/morf-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://morf.health/)
+- [Documentation](https://docs.morf.health/)
+- [Getting started](https://docs.morf.health/morf_dashboard/overview)
+- [API reference](https://docs.morf.health/libraries/introduction)
+- [Pricing](https://www.morf.health/pricing)
+- [Sign up](https://dashboard.morf.health/signup)
+- [Support](https://www.morf.health/contact)
+- [Blog](https://www.morf.health/blog)
+- [Compliance](https://trust.morf.health/)
+- [Terms of service](https://www.morf.health/terms-of-service)
+- [Privacy policy](https://www.morf.health/privacy-policy)
+- [GitHub](https://github.com/morfhealth)
+
+## API Evangelist rating
+
+**Kin Score 40.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 46.1 |
+
+**Agent readiness 28.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 32.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/morf/](https://apis.io/providers/morf/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Morf: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/morf/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
